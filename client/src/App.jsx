@@ -3,7 +3,7 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import {logo} from "./assets/index"
 import {Home, CreatePosts} from "./pages"
 import "./App.css"
-import { Footer } from "./components";
+import { Footer, ScrollToTopButton } from "./components";
 
 const App = () => {
   return (
@@ -23,6 +23,7 @@ const App = () => {
           <Route path="/create-post" element={<CreatePosts />} />
         </Routes>
       </main>
+      <ScrollToTopButton />
       <Footer />
     </BrowserRouter>
   );

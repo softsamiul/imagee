@@ -66,6 +66,18 @@
   margin-bottom: 28px;
 }
 
+.scroll-to-top{
+  position: fixed;
+  right: 25px;
+  bottom: 150px;
+}
+.top-icon{
+  transform: rotate(180deg)
+}
+.hover-eff:hover{
+  opacity: 1;
+}
+
 @media (max-width: 678px){
   .header-wrap{
     padding: 0 20px;
