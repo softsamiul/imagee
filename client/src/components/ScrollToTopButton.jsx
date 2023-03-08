@@ -32,7 +32,7 @@ function ScrollToTopButton() {
         <div className="scroll-to-top h-12 bg-black-100" onClick={scrollToTop}>
           
           
-          <div className="position-fixed top-0 bottom-0 h-full w-full bg-slate-300 rounded-lg opacity-5 hover-eff">
+          <div className="position-fixed top-0 bottom-0 h-full w-full bg-slate-300 rounded-lg hover-eff">
             <img src= {arrowToUp} alt="Go to Top Icon" className="w-10 h-12 top-icon rounded-lg position-relative" />
           </div>
         </div>

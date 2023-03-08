@@ -74,6 +74,10 @@
 .top-icon{
   transform: rotate(180deg)
 }
+.hover-eff{
+  opacity: .5;
+  transition: all ease-in-out .5s;
+}
 .hover-eff:hover{
   opacity: 1;
 }
