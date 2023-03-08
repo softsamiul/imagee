@@ -22,7 +22,7 @@ const Home = () => {
   const fetchPost = async()=>{
     setLoading(true)
     try {
-      const response = fetch("http://localhost:8090/api/v1/post")
+      const response = fetch("https://imagee.vercel.app/api/v1/post")
       response.then(res=> res.json()).then(res => selAllPosts(res.data.reverse()))
     } catch (error) {
       alert(error)

@@ -22,7 +22,7 @@ app.get("/", async(req, res)=>{
 const startServer = async() => {
     try{
         connectDB(process.env.MONGODB_URL);
-        app.listen(PORT, ()=>console.log("Server started on port http://localhost:8090"))
+        app.listen(PORT, ()=>console.log("Server started on port https://imagee.vercel.app"))
     }catch(err){
         console.log("err>>>>>>>>", err)
     }
