@@ -8,7 +8,7 @@ import { Footer, ScrollToTopButton } from "./components";
 const App = () => {
   return (
     <BrowserRouter>
-      <header className=" header-wrap w-full max-w-7xl mx-auto flex justify-between items-center bg-white py-4 border-b border-b[#e6ebf4]">
+      <header className="sticky top-0 z-10 header-wrap w-full mx-auto px-32 flex justify-between items-center bg-white py-4 border-b border-b[#e6ebf4]">
         <Link to="/">
           {/* <img src={logo} alt="logo" className="object-contain w-36"/> */}
           <h2 className="branding__text">Imagee</h2>
@@ -22,8 +22,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/create-post" element={<CreatePosts />} />
         </Routes>
+        <ScrollToTopButton />
       </main>
-      <ScrollToTopButton />
       <Footer />
     </BrowserRouter>
   );
