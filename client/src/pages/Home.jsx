@@ -20,15 +20,12 @@ const Home = () => {
   const [searchTimeout, setSreachTimeout] = useState(null)
 
   const fetchPost = async()=>{
-    setLoading(true)
-    try {
+      setLoading(true)
       const response = fetch("https://imagee.vercel.app/api/v1/post")
-      response.then(res=> res.json()).then(res => selAllPosts(res.data.reverse()))
-    } catch (error) {
-      alert(error)
-    }finally{
-      setLoading(false)
-    }
+      response.then(res=> res.json()).then(res => {
+        selAllPosts(res.data.reverse())
+        setLoading(false)
+      })
   }
   useEffect(()=>{
     fetchPost()
@@ -72,7 +69,7 @@ const Home = () => {
 
       <div className="mt-10">
         {loading ? (
-          <Loader className="flex justify-center items-center" />
+          <Loader />
         ) : (
           <>
             {searchText && (
@@ -96,6 +93,7 @@ const Home = () => {
           </>
         )}
       </div>
+      {console.log("loader", loading)}
     </section>
   );
 };
